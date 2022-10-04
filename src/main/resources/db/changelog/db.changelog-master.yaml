@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/ddl/student-01.yaml
+  - include:
+      file: db/changelog/dml/student-insert-01.yaml

@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: Student Data System
+  description: Student Data API
+  version: 0.0.1
+tags:
+  - name: student
+    description: api for student
+  - name: subject
+    description: api for subject
+paths:
+  /student:
+    get:
+      summary: get All Students
+      operationId: getStudents
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StudentsDTO'
+      tags:
+        - student
+
+components:
+  schemas:
+    StudentDTO:
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+    StudentsDTO:
+      properties:
+        students:
+          type: array
+          items:
+            $ref: '#/components/schemas/StudentDTO'

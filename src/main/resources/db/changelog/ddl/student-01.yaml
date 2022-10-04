@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: student-01
+      author: phumiphas-nopthaisong
+      changes:
+        - createTable:
+            tableName: STUDENT
+            columns:
+              - column:
+                  name: STUDENT_ID
+                  type: VARCHAR(255)
+                  remarks: primary key
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_student
+                    nullable: false
+              - column:
+                  name: FIRST_NAME
+                  type: VARCHAR(255)
+                  remarks: first name
+              - column:
+                  name: LAST_NAME
+                  type: VARCHAR(255)
+                  remarks: last name
+              - column:
+                  name: DATE_OF_BIRTH
+                  type: VARCHAR(255)
+                  remarks: date of birth
+              - column:
+                  name: LEVEL
+                  type: VARCHAR(255)
+                  remarks: level

@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: student-insert-01
+      author: phumiphas-nopthaisong
+      changes:
+        - insert:
+            tableName: STUDENT
+            columns:
+              - column:
+                  name: STUDENT_ID
+                  value: "20220100001"
+              - column:
+                  name: FIRST_NAME
+                  value: "Test1"
+              - column:
+                  name: LAST_NAME
+                  value: "Tester"
+              - column:
+                  name: DATE_OF_BIRTH
+                  value: "20000101"
+              - column:
+                  name: LEVEL
+                  value: "1"
+        - insert:
+            tableName: STUDENT
+            columns:
+              - column:
+                  name: STUDENT_ID
+                  value: "20220100002"
+              - column:
+                  name: FIRST_NAME
+                  value: "Test2"
+              - column:
+                  name: LAST_NAME
+                  value: "Tester"
+              - column:
+                  name: DATE_OF_BIRTH
+                  value: "20000101"
+              - column:
+                  name: LEVEL
+                  value: "1"
