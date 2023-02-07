@@ -8,10 +8,9 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 public class UtilsTestData {
 
-    public StudentsDTO genStudentsData(){
+    public static StudentsDTO genStudentsData(){
 
         StudentsDTO studentsDTO = new StudentsDTO();
 
@@ -36,7 +35,7 @@ public class UtilsTestData {
         return studentsDTO;
     }
 
-    public List<Student> genStudentList(){
+    public static List<Student> genStudentList(){
         List<Student> students = new ArrayList<>();
 
         for (int i = 0; i < 2; i++) {

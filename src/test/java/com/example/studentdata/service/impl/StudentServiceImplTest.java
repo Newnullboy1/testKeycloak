@@ -31,13 +31,11 @@ class StudentServiceImplTest {
 
     StudentMapper studentMapper = spy(StudentMapperImpl.class);
 
-    private final UtilsTestData utilsTestData = new UtilsTestData();
-
     @Test
     @DisplayName("when call method getStudent should return Student list size = 2 as StudentsDTO")
     void getStudentList() {
 
-        List<Student> students = utilsTestData.genStudentList();
+        List<Student> students = UtilsTestData.genStudentList();
 
         when(studentRepository.findAll()).thenReturn(students);
         when(studentMapper.toStudentDTO(anyList())).thenCallRealMethod();
